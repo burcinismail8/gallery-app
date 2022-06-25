@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+
+:root {
+  --primary: #e3b2ef;
+  --secondary: #4e4e4e;
+  --error: #ff4a4a;
+}
+
+/* base styles & title */
+body {
+  font-family: "Noto Serif";
+  color: var(--secondary);
+}
+
+.App {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+
+.title h2,
+.title p {
+  text-align: center;
+}
+
+.title h2 {
+  font-size: 2.6rem;
+}
+
+.auth-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+/* upload form styles */
+form {
+  margin: 30px auto 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.add-button,
+.search-button {
+  width: 20%;
+  margin: 5px 0;
+}
+
+.add-photo input {
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+.add-photo {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--primary);
+  border-radius: 50%;
+  margin: 10px auto;
+  line-height: 50px;
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 34px;
+}
+
+.add-photo:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.input-field {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.output {
+  font-size: 0.8rem;
+}
+
+.error {
+  color: var(--error);
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* progress bar styles */
+.progress-bar {
+  height: 5px;
+  background: var(--primary);
+  margin-top: 20px;
+}
+
+/* modal styles */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.backdrop img {
+  display: block;
+  max-width: 60%;
+  max-height: 90%;
+  margin: 25px 70px;
+  box-shadow: 3px 5px 7px rgb(0 0 0 / 50%);
+  border: 3px solid white;
+}
+
+/*Modal*/
+
+.modal-button {
+  width: 15%;
+}
+
+.image-swipe-div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.img-buttons {
+  margin-top: 20px;
+}
+
+.img-buttons button {
+  margin: 0 5px;
+}
+
+.container {
+  position: relative;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+
+}
+
+.hover-buttons {
+  transition: .5s ease;
+  opacity: 0;
+  width: 30%;
+  display: inline-block;
+  top: 10%;
+  left: 85%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+.container:hover .hover-buttons {
+  opacity: 1;
+}
+
+.sign-up-error-div {
+  width: 100%;
+  color: #cb1717;
+  font-size: 13px;
+  display: flex;
+  padding-left: 20px;
+}
+
+@media screen and (max-width:400px) {
+  .hover-buttons {
+    top: 25%;
+    left: 90%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .input-field {
+    width: 100%;
+  }
+
+  .auth-buttons {
+    flex-direction: column;
+  }
+
+  .backdrop img {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .input-field {
+    width: 70%;
+  }
+
+  .backdrop img {
+    max-width: 80%;
+  }
+
+  .backdrop {
+    padding-top: 25%;
+  }
+}
