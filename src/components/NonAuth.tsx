@@ -1,37 +1,22 @@
-import { Grid, ImageList, ImageListItem } from "@mui/material";
 import React from "react";
-import { RootStateOrAny, useSelector } from "react-redux";
-import { IItem } from "../models/IItem";
-
+import { AuthButtons } from "./AuthButtons";
+import "../NonAuth.css";
+import Title from "./Title";
 const NonAuth = () => {
-  const defaultImages = useSelector((state: RootStateOrAny) => state.data);
-
   return (
-    <div>
-      <Grid container spacing={0.5}>
-        {defaultImages &&
-          defaultImages.map((item: IItem) => {
-            return (
-              <Grid
-                item
-                xl={4}
-                lg={4}
-                md={6}
-                key={item.url}
-                className="container"
-              >
-                <img
-                  src={`${item.url}?w=248&fit=crop&auto=format`}
-                  srcSet={`${item.url}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                  alt={item.url}
-                  loading="lazy"
-                  style={{ cursor: "pointer" }}
-                  className="image"
-                />
-              </Grid>
-            );
-          })}
-      </Grid>
+    <div className="non-auth-page">
+      <div className="non-auth-page-image"></div>
+      <div className="non-auth-content">
+        <h2>Welcome to our Gallery app</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat,
+          saepe? Est eveniet odit similique, omnis corrupti quos nulla nam eaque
+          quasi dolorem facilis autem inventore error quisquam soluta doloremque
+          porro? Sequi nihil consectetur quibusdam repellendus adipisci
+          voluptatem vitae exercitationem eaque.
+        </p>
+        <AuthButtons />
+      </div>
     </div>
   );
 };

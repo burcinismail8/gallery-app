@@ -12,8 +12,7 @@ body {
   color: var(--secondary);
 }
 
-.App {
-  max-width: 80%;
+body {
   margin: 0 auto;
 }
 

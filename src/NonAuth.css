@@ -1,0 +1,20 @@
+.non-auth-page {
+    display: flex;
+}
+
+.non-auth-page-image {
+    width: 50%;
+    height: 100vh;
+    background-image: url(https://images.pexels.com/photos/6835293/pexels-photo-6835293.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    background-position: center center;
+}
+
+.non-auth-content {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}

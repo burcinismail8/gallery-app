@@ -65,17 +65,6 @@ export const AuthButtons = () => {
               Sign Up
             </Button>
           </div>
-          <Box sx={{ width: "100%" }}>
-            <Tabs
-              value={value}
-              onChange={handleChange}
-              textColor="secondary"
-              indicatorColor="secondary"
-              aria-label="secondary tabs example"
-            >
-              <Tab value="/" label="Image Gallery" />
-            </Tabs>
-          </Box>
         </div>
       )}
     </div>

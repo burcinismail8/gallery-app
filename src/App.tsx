@@ -29,8 +29,6 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <AuthButtons />
-        <Title />
         <Routes>
           <Route path="/" element={<NonAuth />} />
           <Route path="/my-gallery" element={<UserGallery />} />
